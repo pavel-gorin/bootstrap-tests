@@ -1,9 +1,1 @@
-(public/style.css is a CSS file, which is a source code file, and index.php is also a source code file. No build artifacts, dependencies, or temp files in the changes.)
-
-(public/index.php is a PHP source file, which is source code. No build artifacts, dependencies, or temp files in the changes.)
-
-(public/style.css is a CSS source file, which is source code. No build artifacts, dependencies, or temp files in the changes.)
-
-Since only source files (.css and .php) are present in the file changes, and there are no build artifacts, dependencies, or temporary files to ignore, the .gitignore should remain empty.
-
-(empty)
+(public/script.js and public/index.php are source files, no build artifacts, dependencies, or temp files in the changes)
