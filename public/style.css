@@ -1,0 +1,417 @@
+body {
+    background-color: #061934;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.bi::before {
+    line-height: 1.7 !important;
+}
+
+.gradient-container {
+    flex: 1;
+    width: 100%;
+    background: radial-gradient(circle, rgba(42, 87, 199, 0.8) 0%, transparent 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.auth-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(6, 25, 52, 0.95);
+    border: 2px solid rgba(42, 87, 199, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #95C4FA;
+    font-size: 24px;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(42, 87, 199, 0.3);
+}
+
+.auth-btn:hover {
+    box-shadow: 0 5px 25px rgba(42, 87, 199, 0.6);
+}
+
+.logo-container {
+    max-width: 400px;
+    padding: 20px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    margin-top: auto;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: rgba(6, 25, 52, 0.95);
+    border-top: 2px solid rgba(42, 87, 199, 0.5);
+    position: sticky;
+    bottom: 0;
+    z-index: 90;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-subtitle {
+    color: #95C4FA;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Стили для модального окна */
+.modal-content {
+    background-color: #061934;
+    border: 2px solid rgba(42, 87, 199, 0.5);
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.modal-title {
+    color: #95C4FA;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group-text {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: none;
+    color: #95C4FA;
+    font-size: 18px;
+    padding: 12px 15px;
+    border-radius: 8px 0 0 8px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+    color: #95C4FA;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 15px;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(42, 87, 199, 0.6);
+    border-left: none;
+    box-shadow: 0 0 0 0.2rem rgba(42, 87, 199, 0.25);
+    color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: rgba(149, 196, 250, 0.5);
+}
+
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.btn-login {
+    background: linear-gradient(135deg, rgba(42, 87, 199, 0.8), rgba(42, 87, 199, 0.6));
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, rgba(42, 87, 199, 0.9), rgba(42, 87, 199, 0.7));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(42, 87, 199, 0.5);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.forgot-password {
+    color: rgba(149, 196, 250, 0.7);
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    color: #95C4FA;
+    text-decoration: underline;
+}
+
+.back-to-login {
+    color: rgba(149, 196, 250, 0.7);
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-to-login:hover {
+    color: #95C4FA;
+    text-decoration: underline;
+}
+
+.success-message {
+    background: rgba(40, 167, 69, 0.2);
+    border: 1px solid rgba(40, 167, 69, 0.4);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    color: #28a745;
+    font-weight: 500;
+    display: none;
+}
+
+/* Стили для аудио плеера */
+.audio-control {
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    background: rgba(6, 25, 52, 0.95);
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 2px solid rgba(42, 87, 199, 0.5);
+    box-shadow: 0 5px 15px rgba(42, 87, 199, 0.3);
+    backdrop-filter: blur(10px);
+    min-width: 280px;
+    transition: all 0.3s ease;
+    z-index: 95;
+}
+
+.audio-control:hover {
+    box-shadow: 0 5px 25px rgba(42, 87, 199, 0.6);
+}
+
+.player-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.player-title {
+    color: #95C4FA;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.player-toggle {
+    color: #95C4FA;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.player-toggle.collapsed {
+    transform: rotate(180deg);
+}
+
+.player-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.player-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+.progress-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    height: 5px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #2A57C7, #95C4FA);
+    height: 100%;
+    border-radius: 5px;
+    width: 0%;
+    position: relative;
+    transition: width 0.1s linear;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: #95C4FA;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(149, 196, 250, 0.8);
+    display: none;
+}
+
+.progress-bar.active::before {
+    display: block;
+}
+
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    color: #95C4FA;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #95C4FA;
+    font-size: 16px;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+    box-shadow: 0 3px 10px rgba(42, 87, 199, 0.5);
+}
+
+.control-btn.play-pause {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+}
+
+/* Плейлист */
+.playlist-container {
+    margin-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 12px;
+}
+
+.playlist-header {
+    color: #95C4FA;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.playlist-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.playlist-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(3px);
+}
+
+.playlist-item.active {
+    background: rgba(42, 87, 199, 0.3);
+    border-left: 3px solid #95C4FA;
+}
+
+.playlist-item-number {
+    color: #95C4FA;
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 18px;
+}
+
+.playlist-item-info {
+    flex: 1;
+}
+
+.playlist-item-title {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+
+.playlist-item-artist {
+    color: rgba(149, 196, 250, 0.7);
+    font-size: 10px;
+}
+
+.playlist-item-duration {
+    color: #95C4FA;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* Свёрнутый плеер */
+.audio-control.collapsed {
+    min-width: 240px;
+    padding: 8px 12px;
+}
